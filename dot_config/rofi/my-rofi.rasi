@@ -1,0 +1,141 @@
+* {
+  /* Default background color */
+  background-color: transparent;
+  text-color:       white;
+}
+
+
+window {
+  padding: 1em;
+
+  border-color: #242424;
+  border:       5px;
+  border-radius: 10px;
+
+  width:  1024px; 
+//  height: 768px;
+
+  background-color: #242424;
+
+//  background-image: url("iggy.jpg", width);
+}
+
+mainbox {
+  spacing: 5px;
+  children: [inputbar,listview];
+  //children: [inputbar,wrapper-mode-switcher,listview];
+}
+
+element {
+  background: transparent;
+  children: [ element-icon, element-text ];
+}
+element,element-text,element-icon, button {
+    cursor: pointer;
+}
+
+inputbar {
+  margin: 0px 0px 0.5em 0em;
+  spacing: 0.4em;
+  children: [ button-iggy1, entry,overlay,case-indicator, button-iggy2];
+}
+
+button-iggy1, button-iggy2 {
+  expand: false;
+  //content: "🐢";
+  action: "kb-primary-paste";
+  horizontal-align: 0.5;
+}
+button-iggy2 {
+  action: "kb-screenshot";
+}
+
+listview, inputbar, message {
+  padding: 0.5em;  
+  border-color: #242424;
+  border:        5px;
+  border-radius: 10px;
+  background-color: black/70%;
+
+  columns: 5;
+  lines:   5;
+}
+listview {
+  border:       5px 5px 5px 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+element {
+    border:  0;
+    padding:      10px;
+    font:         "JetBrains Mono Nerd Font 13";
+    orientation: vertical;
+}
+element-icon {
+  size: 5em;
+}
+
+element  selected {
+  border-color: #242424;
+  border:       5px;
+  border-radius: 10px;
+  background-color: grey/20%;
+}
+
+element-text, element-icon {
+  font:             inherit; 
+  horizontal-align: 0.5;
+}
+
+wrapper-mode-switcher {
+    orientation: horizontal;
+
+    expand:     false;
+    spacing:    0;
+    children: [ icon-ms-ic1, mode-switcher, icon-ms-ic2 ];
+}
+icon-ms-ic1 {
+    filename: "go-previous";
+    action: "kb-mode-previous";
+}
+icon-ms-ic2 {
+    filename: "go-next";
+    action: "kb-mode-next";
+}
+icon-ms-ic1,icon-ms-ic2 {
+    size: 0;
+    vertical-align: 0.8;
+    expand:        false;
+    border:       0px 0px 0px ;
+    border-color: #242424;
+}
+
+mode-switcher {
+    border:  0px;
+    spacing: 0px;
+    expand: true;
+}
+button {
+    text-color: white;
+    border:       0px 0px 0px ;
+    border-color: #242424;
+    border-radius:    0px 0px 0 0;
+    background-image: linear-gradient(to bottom, white/50%, darkgrey/70%);
+    horizontal-align: 0.5;
+}
+button selected.normal {
+    text-color: white;
+    margin: 0px;
+    padding: 0px;
+
+    border:       0px 0px 0px ;
+    border-color: #242424;
+    border-radius:    0px 0px 0 0;
+    //background-image: linear-gradient(to bottom, white, black/70%);
+}
+
+entry {
+    placeholder: "Run...";
+    placeholder-color: darkgrey/35%;
+}

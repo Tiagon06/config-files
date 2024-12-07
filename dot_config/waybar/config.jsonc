@@ -1,0 +1,133 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passtrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "battery",
+        "custom/brightness",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "clock",
+        "tray"
+    ],
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "󰈹",
+            "3": "",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "",
+            "10": "󰎌",
+            "urgent": "",
+            "default": ""
+        }
+    },
+    "custom/updates": {
+        "exec": "(paru -Qua) | wc -l",
+        "interval": 7200,
+        "format": " {}"
+    },
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 40,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁼",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "format": " {:%H:%M   %d/%m}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    },
+    "custom/brightness": {
+        "exec": "expr `expr \\`cat /sys/class/backlight/*/brightness\\` \\* 100` / `cat /sys/class/backlight/*/max_brightness `",
+        "interval": 1,
+        "format": "󰃟 {}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 1",
+        "on-scroll-down": "pamixer -d 1",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "tooltip": false,
+        "format-source": " {volume}%",
+        "format-source-muted": " Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 1
+    }
+}
+// ~/.config/waybar/config
+{
+  "modules-left": ["battery", "clock"],
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""] // Unicode for Font Awesome battery icons
+  },
+  "clock": {
+    "format": "{icon} %H:%M",
+    "format-icons": [""], // Unicode for Font Awesome clock icon
+  }
+}
+
