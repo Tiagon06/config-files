@@ -22,13 +22,12 @@ return {
         floats = transparent and "transparent" or "dark",
       },
       on_colors = function(colors)
-        colors.red = "#EE4B2B"
+        colors.red = "#FF0000"
         colors.green = "#32CD30"
         colors.blue = "#5294E3"
-        colors.red = "#FF0000"
         colors.bg = bg
         colors.bg_dark = transparent and colors.none or bg_dark
-        colors.bg_float = colors.orange
+        colors.bg_float = bg_highlight
         colors.bg_highlight = bg_highlight
         colors.bg_popup = bg_dark
         colors.bg_search = bg_search
