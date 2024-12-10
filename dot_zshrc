@@ -106,4 +106,5 @@ alias zshthemes="ls ~/.oh-my-zsh/themes/"
 alias BTW="neofetch"
 alias inspirador="fortune | cowsay -r | lolcat"
 alias FF="firejail firefox"
+alias v="nvim"
 export EDITOR=nvim
