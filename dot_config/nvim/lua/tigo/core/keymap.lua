@@ -26,3 +26,14 @@ keymap.set("v", "J", "<V")
 
 -- open explorer
 keymap.set("n", "<leader>e", ":Ex<CR>")
+
+-- 
+keymap.set({ "n" }, "<M-j>", "<C-w>h")
+keymap.set({ "n" }, "<M-k>", "<C-w>j")
+keymap.set({ "n" }, "<M-l>", "<C-w>k")
+keymap.set({ "n" }, "<M-ç>", "<C-w>l")
+keymap.set({ "n" }, "<M-;>", "<C-w>l")
+keymap.set({ "n" }, "<M-J>", "<C-w>H")
+keymap.set({ "n" }, "<M-K>", "<C-w>J")
+keymap.set({ "n" }, "<M-L>", "<C-w>K")
+keymap.set({ "n" }, "<M-Ç>", "<C-w>L")
