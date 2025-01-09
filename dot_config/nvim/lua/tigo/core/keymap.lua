@@ -27,7 +27,7 @@ keymap.set("v", "J", "<V")
 -- open explorer
 keymap.set("n", "<leader>e", ":Ex<CR>")
 
--- 
+-- window flow
 keymap.set({ "n" }, "<M-j>", "<C-w>h")
 keymap.set({ "n" }, "<M-k>", "<C-w>j")
 keymap.set({ "n" }, "<M-l>", "<C-w>k")
