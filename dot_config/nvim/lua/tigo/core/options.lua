@@ -13,7 +13,7 @@ o.expandtab = true
 o.smartindent = true
 
 o.incsearch = true
-o.hlsearch = false
+o.hlsearch = true
 o.ignorecase = true
 
 o.scrolloff = 5
