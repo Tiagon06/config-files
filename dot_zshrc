@@ -107,4 +107,6 @@ alias BTW="neofetch"
 alias inspirador="fortune | cowsay -r | lolcat"
 alias FF="firejail firefox"
 alias v="nvim"
+alias lg="lazygit"
+alias r="ranger"
 export EDITOR=nvim
