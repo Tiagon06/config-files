@@ -51,7 +51,7 @@ return {
         hl.Repeat = { fg = c.orange }
         hl.Label = { fg = c.orange }
         hl.ColorColumn = { fg = c.dark5 }
-        hl.Comment = { fg = c.comment, italic = true }
+        hl.Comment = { fg = c.comment , italic = true }
       end,
     })
 

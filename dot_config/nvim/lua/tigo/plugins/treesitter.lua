@@ -42,8 +42,6 @@ return {
         "query",
         "vimdoc",
         "c",
-        "python",
-        "prolog",
       },
       incremental_selection = {
         enable = true,
