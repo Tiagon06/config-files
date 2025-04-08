@@ -1,1 +1,1 @@
-Hello and Welcome to my Config pag of linux
+My config page for arch linux hyprland
